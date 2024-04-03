@@ -1,0 +1,333 @@
+section {
+    margin: 150px;
+    padding:150px;
+}
+
+.navbar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-toggle:hover .bar {
+    transform: scaleX(0.7);
+}
+
+.menu-toggle:hover .bar:nth-child(3) {
+    transform: translateY(2px) rotate(7deg);
+}
+
+/* New styles for the menu overlay and items container */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgb(0, 0, 0); 
+    z-index: 999; 
+    overflow: hidden; /* Hide overflowing content */
+    transition: height 0.3s ease; /* Add transition effect for height change */
+}
+.menu-overlay.show {
+    height: 100%; /* Set height to 100% to reveal the background */
+}
+.menu-items-container {
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%) scaleY(0); 
+    padding: 20px;
+    z-index: 1000; 
+    transition: transform 0.4s ease;
+}
+
+.menu-items-container.show {
+    transform: translate(-50%, -50%) scaleY(1); 
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color:antiquewhite;
+    font-size:xx-large;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.menu-items a:hover {
+    text-decoration: none;
+    color:rgb(187, 179, 179)
+}
+/* Show the menu items and overlay when menu is toggled */
+.menu-items-container.show,
+.menu-overlay.show {
+    display: block;
+}
+
+#me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.metittle {
+    font-size: 40px;
+}
+.text-me {
+    flex: 1;
+    margin-right: 30px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.image-container {
+    flex-shrink: 0; /* Prevent image from growing */
+}
+
+.small-image {
+    max-width: 250px; /* Set a maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+ .about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-container {
+    flex: 1; /* Take up remaining space */
+}
+
+.forabout {
+    font-family: sans-serif;
+    font-size: 40px;
+}
+
+.about-text {
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-right: 30px;
+}
+
+.about-image img {
+    max-width: 300px; /* Set a maximum width for the image */
+    height: auto; 
+    border-radius: 10px;
+}
+
+ .edu{
+    font-family: sans-serif;
+    font-size: 40px;
+}
+.edutext{
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.edutext a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.edutext a:hover {
+    color: rgb(255, 0, 0); /* Change color on hover */
+}
+
+ul li {
+    font-size: 20px; 
+} 
+
+
+.toolimages {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+.toolimages img {
+    width: 100px; 
+    height: auto; 
+    margin: 20px; 
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.toolimages img:hover {
+    transform: scale(1.1);
+}
+
+.tool {
+    font-family: sans-serif;
+    font-size: 40px;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure full height */
+}
+
+#contact {
+    background-color:  #f5f5f5; 
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 20px; 
+    margin: 0; /* Remove margin */
+    box-sizing: border-box; /* Include padding in width calculation */
+    min-height: 100vh; /* Ensure section takes up at least the full viewport height */
+}
+
+
+.contact-text {
+    padding: 100px; 
+    flex: 1;
+    margin-right: 1px; /* Add margin to the right side to create space */
+}
+
+.contact-form {
+    flex: 1; /* Take up remaining space */
+    margin-left: 1px; /* Add some space between the text and the form */
+    margin-top: 19px; /* Adjust margin to bring form closer to text */
+}
+
+.contact-text h2 {
+    font-size: 40px;
+    font-family: sans-serif;
+    margin-bottom: 9px; /* Adjust margin to bring h2 closer to p */
+}
+
+.contact-text p {
+    font-size: 19px;
+    font-family: sans-serif;
+    margin-bottom: 9px; /* Adjust margin to bring p closer to .social-icon */
+}
+
+.social-icon {
+    font-size: 20px;
+    color: #000000;
+    padding: 7px;
+}
+  
+  .social-icon:hover {
+    color: #636363; 
+  }
+  
+
+
+.contact-form form {
+    padding: 20px; /* Add padding inside the form */
+    width: 300px; /* Set the width of the form */
+}
+
+.contact-form .special {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #000000;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    resize: none;
+    border-radius: 5px;
+    height:20px; 
+    font-family: sans-serif;
+}
+
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #000000;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    resize: none;
+    border-radius: 5px;
+    height: 200px; 
+    font-family: sans-serif;
+}
+.contact-form input[type="submit"] {
+    background-color: rgb(121, 121, 128);
+    color: white; 
+    border: none; 
+    padding: 19px; 
+    cursor: pointer; 
+    border-radius: 5px;
+    padding: 7px 7px;
+    font-family: sans-serif;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: rgb(133, 129, 129); /* Change background color of submit button on hover */
+}
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(61, 61, 61, 0.596); 
+  }
+  
+  .modal-content {
+    background-color: #fafafa;
+    margin: 15% auto; 
+    padding: 30px;
+    width: 80%; 
+    border-radius: 20px;
+  }
+  
+  .close {
+    color: #000000;
+    float: right;
+    font-size: 27px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #ff0000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 15px;
+    letter-spacing: 2px;
+    width: 100%;
+    background-color: #a0a1a3;
+    color: #fff;
+    font-family: Caveat;
+    padding: 1px;
+    text-align: center;
+    display: none;
+    z-index: 100; 
+  }
